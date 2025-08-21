@@ -1,44 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Card from '../components/Card'
-import ChatBot from '../components/ChatBot'
+<main className="bg-gradient-to-b from-purple-100 via-purple-50 to-white min-h-screen text-gray-800 font-sans">
+  <section className="text-center p-10 max-w-4xl mx-auto">
+    <h1 className="text-5xl font-extrabold text-purple-800 mb-4 drop-shadow-lg">Juntas Contra a Violência</h1>
+    <p className="text-xl md:text-2xl text-purple-900 mb-8">Informação, acolhimento e caminhos para uma vida sem violência.</p>
+    <div className="mx-auto max-w-xl rounded-lg overflow-hidden shadow-2xl">
+      <Image src="/images/banner.jpg" alt="Banner força feminina" width={600} height={300} className="object-cover" />
+    </div>
+  </section>
 
-const temas = [
-  'Violência Física',
-  'Violência Psicológica',
-  'Violência Sexual',
-  'Violência Patrimonial',
-  'Violência Moral',
-  'Assédio e perseguição',
-  'Abandono e negligência',
-  'Violência digital',
-  'Rede de proteção'
-]
+  <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-8 max-w-6xl mx-auto">
+    {temas.map((tema, index) => (
+      <Card key={index} title={tema} />
+    ))}
+  </section>
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Juntas Contra a Violência</title>
-      </Head>
-      <main className="bg-purple-50 min-h-screen text-gray-800 font-sans">
-        <section className="text-center p-8">
-          <h1 className="text-4xl font-bold text-purple-700">Juntas Contra a Violência</h1>
-          <p className="text-xl mt-2 text-purple-900">Informação, acolhimento e caminhos para uma vida sem violência.</p>
-          <div className="my-6 flex justify-center">
-            <Image src="/images/banner.jpg" alt="Banner força feminina" width={600} height={300} className="rounded-lg shadow" />
-          </div>
-        </section>
-
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-          {temas.map((tema, index) => (
-            <Card key={index} title={tema} />
-          ))}
-        </section>
-
-        <ChatBot />
-      </main>
-    </>
-  )
-}
+  <ChatBot />
+</main>
 
