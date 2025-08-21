@@ -1,4 +1,4 @@
-{
+{{
   "name": "violencia-mulher",
   "version": "1.0.0",
   "private": true,
@@ -13,6 +13,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.37.0"
+    "@netlify/plugin-nextjs": "^4.37.0",
+    "typescript": "^5.4.5",
+    "@types/react": "^18.2.15",
+    "@types/node": "^20.12.12"
   }
 }
