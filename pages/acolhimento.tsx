@@ -1,14 +1,16 @@
-
 export default function Acolhimento() {
   return (
-    <main className="p-6 bg-purple-50 text-gray-800">
-      <h1 className="text-2xl font-bold text-purple-700">Acolhimento e Recuperação</h1>
-      <ul className="list-disc ml-6 mt-4 text-sm">
-        <li>Serviços de apoio psicológico</li>
-        <li>Casas de passagem</li>
-        <li>Terapias de grupo</li>
-        <li>Programas sociais</li>
+    <section className="max-w-4xl mx-auto space-y-8">
+      <h2 className="text-3xl font-extrabold text-purple-800 mb-6 text-center">
+        Acolhimento e Recuperação
+      </h2>
+
+      <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <li><strong>Serviços de apoio psicológico:</strong> atendimento individualizado para mulheres em situação de violência.</li>
+        <li><strong>Casas de passagem:</strong> acolhimento temporário e seguro para mulheres em risco.</li>
+        <li><strong>Terapias de grupo:</strong> espaços de escuta e fortalecimento emocional.</li>
+        <li><strong>Programas sociais:</strong> iniciativas para inclusão e autonomia.</li>
       </ul>
-    </main>
-  )
+    </section>
+  );
 }
